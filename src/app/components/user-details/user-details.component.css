@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Trebuchet MS, Helvetica;
+}
+
+.profile {
+  border: 1px solid #000;
+  height: 100%;
+  margin: 20px 10px;
+}
+
+.profile-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid #000;
+}
+
+.avatar {
+  width: 100px;
+  border: 3px solid #636e72;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 1.7em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10vh;
+  width: 60vw;
+}
+
+h3 {
+  border-bottom: 1px solid #9dabb1;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.repos {
+  padding: 0px 30px;
+}
+
+.repos-title {
+  border-bottom: 1px solid #000;
+}
+
+.repos-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+  list-style-type: none;
+}
+
+.repos-list-item {
+  margin-bottom: 10px;
+  margin-right: 20px;
+}

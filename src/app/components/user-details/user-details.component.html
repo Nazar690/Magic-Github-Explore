@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<main class="profile">
+    <header class="profile-title">
+        <img class="avatar" src={{userDetails.avatarUrl}} alt="avatar_img">
+        <p class="username">{{userDetails.username}}</p>
+        <a class="github-link" href="{{userDetails.htmlUrl}}">View on Github</a>
+    </header>
+    <section class="info">
+        <div class="info-item">
+            <i class="fas fa-user fa-2x"></i>
+            <h3 class="name">
+                {{userDetails.name}}
+            </h3>
+        </div>
+        <div class="info-item">
+            <i class="far fa-clock fa-2x"></i>
+            <h3 class="created">
+                {{userDetails.created | date:'medium'}}
+            </h3>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt fa-2x"></i>
+            <h3 class="location">
+                {{userDetails.location || 'none'}}
+            </h3>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-briefcase fa-2x"></i>
+            <h3 class="company">
+                {{userDetails.company || 'none'}}
+            </h3>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-envelope fa-2x"></i>
+            <h3 class="email">
+                {{userDetails.email || 'none'}}
+            </h3>
+        </div>
+    </section>
+    <section class="repos">
+        <h2 class="repos-title">Repos</h2>
+        <ul class="repos-list">
+            <li class="repos-list-item" *ngFor="let userRepos of userReposes"><a href={{userRepos.url}}>{{userRepos.name}}</a></li>
+        </ul>
+    </section>
+</main>

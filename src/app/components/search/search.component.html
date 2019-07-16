@@ -1,0 +1,27 @@
+<main>
+    <section class="search_form">
+        <h1>Search Users</h1>
+        <div class="search">
+            <input type="text" name="username" [(ngModel)]="username" placeholder="username">
+            <button class="btn__search" (click)="search()">Search</button>
+        </div>
+    </section>
+    <table class="users-table" mat-table [dataSource]="users">
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td class="users-table-row" mat-cell *matCellDef="let user">
+                <div class="user">
+                    <img class="avatar" src={{user.avatarUrl}} alt="avatar">
+                    <p class="username">{{user.username}}</p>
+                </div>
+                <div class="links">
+                    <a [routerLink]="['/user-details', user.username]">View Details</a>
+                    <a class="view" href={{user.htmlUrl}}>Open on Github</a>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator class="controls" [pageSizeOptions]="[20]" showFirstLastButtons></mat-paginator>
+</main>
