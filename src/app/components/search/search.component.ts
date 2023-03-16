@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { UserService } from 'src/app/Services/user.service';
 import { User } from 'src/app/models/user.model';
-import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-search',

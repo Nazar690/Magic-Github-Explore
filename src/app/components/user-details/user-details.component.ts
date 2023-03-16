@@ -12,7 +12,7 @@ import { UserRepos } from 'src/app/models/user-repos.model';
 export class UserDetailsComponent implements OnInit {
 
   public username: string;
-  public userDetails: UserDetails=<UserDetails>{};
+  public userDetails: UserDetails = <UserDetails>{};
   public userReposes: UserRepos[];
 
   constructor(private activeRoute: ActivatedRoute, private userService: UserService) { }
@@ -27,7 +27,7 @@ export class UserDetailsComponent implements OnInit {
       this.userService.getUserRepos(this.username).subscribe(data => {
         this.userReposes = data;
       });
-   });
+    });
   }
 
 }

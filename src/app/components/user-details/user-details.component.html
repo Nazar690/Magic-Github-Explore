@@ -40,7 +40,9 @@
     <section class="repos">
         <h2 class="repos-title">Repos</h2>
         <ul class="repos-list">
-            <li class="repos-list-item" *ngFor="let userRepos of userReposes"><a href={{userRepos.url}}>{{userRepos.name}}</a></li>
+            <li class="repos-list-item" *ngFor="let userRepos of userReposes">
+                <a href={{userRepos.url}}>{{userRepos.name}}</a>
+            </li>
         </ul>
     </section>
 </main>
